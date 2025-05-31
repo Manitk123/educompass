@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Guidance - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Unified Mentor Logo" style="width:150px;">
+        <h1>UNIFIED MENTOR</h1>
+        <p>YOUR SKILL. SUCCESS & JOURNEY</p>
+    </header>
+
+    <main>
+        <h2>Student Sign Up</h2>
+        <form id="signupForm">
+            <label for="signupEmail">Email:</label><br>
+            <input type="email" id="signupEmail" name="signupEmail" required><br><br>
+
+            <label for="signupPassword">Password:</label><br>
+            <input type="password" id="signupPassword" name="signupPassword" required><br><br>
+
+            <label for="confirmPassword">Confirm Password:</label><br>
+            <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="index.html">Login</a></p>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration (PASTE YOUR COPIED CONFIG HERE)
+      const firebaseConfig = {
+  apiKey: "AIzaSyDOyiav7Qmbg7Vtu7WE_4_xGTlCiq5bkpw",
+  authDomain: "educompass-341fc.firebaseapp.com",
+  projectId: "educompass-341fc",
+  storageBucket: "educompass-341fc.firebasestorage.app",
+  messagingSenderId: "735452320855",
+  appId: "1:735452320855:web:4e81361dc61b61d0877f12",
+  measurementId: "G-ZZDT2LF9RQ"
+};
+
+      // Initialize Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+
+      // Get references to Firebase services we'll use
+      const auth = app.auth(); // For authentication (login/signup)
+      const db = app.firestore(); // For database operations
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
